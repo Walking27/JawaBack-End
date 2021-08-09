@@ -8,6 +8,8 @@ import kodlamaio.hrmsProje.Demo.entities.concretes.Employer;
 
 public interface EmployerService {
 	
-	public DataResult<List<Employer>>  getAll();
-	Result add(Employer employer);
+    DataResult<List<Employer>>  getAll();
+	
+    Result add(Employer employer);
+	
 }

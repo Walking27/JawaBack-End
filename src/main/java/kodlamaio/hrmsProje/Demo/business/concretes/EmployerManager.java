@@ -11,6 +11,7 @@ import kodlamaio.hrmsProje.Demo.core.utilites.result.Result;
 import kodlamaio.hrmsProje.Demo.core.utilites.result.SuccessDataResult;
 import kodlamaio.hrmsProje.Demo.core.utilites.result.SuccessResult;
 import kodlamaio.hrmsProje.Demo.dataAccesss.abstracts.EmployerDao;
+import kodlamaio.hrmsProje.Demo.entities.concretes.Employee;
 import kodlamaio.hrmsProje.Demo.entities.concretes.Employer;
 
 @Service
@@ -25,12 +26,11 @@ public class EmployerManager implements EmployerService {
 		this.employerDao = employerDao;
 	}
 
-
-
 	@Override
 	public DataResult<List<Employer>>  getAll() {
 		
-		return new SuccessDataResult<List<Employer>>(this.employerDao.findAll(),"DataListelendi");
+		return new SuccessDataResult<List<Employer>>
+		(this.employerDao.findAll(),"DataListelendi");
 	}
 
 
@@ -40,6 +40,8 @@ public class EmployerManager implements EmployerService {
 		this.employerDao.save(employer);
 		return new SuccessResult("Ürün Eklendi");
 	}
+
+	
 
 
 

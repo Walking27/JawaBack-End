@@ -23,7 +23,7 @@ public class JobPosition {
 	@Column(name="jobPosition_id")
     private int id;
 	
-	@Column(name="firstName")
+	@Column(name="first_name")
 	private String firstName;
 	
 	public JobPosition(int id, String firstName) {

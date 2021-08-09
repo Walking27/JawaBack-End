@@ -33,6 +33,9 @@ public class User {
 	
 	@Column(name= "password")
     private String password;
+	
+	@Column(name = "mail_is_verify")
+    private boolean mailVerify;
 
 	public User(int id, String gmail, String password) {
 		super();
@@ -42,7 +45,20 @@ public class User {
 	}
 
 	public User() {
-		// TODO Auto-generated constructor stub
+		
+	}
+
+	public boolean isMailVerify() {
+		return mailVerify;
+	}
+
+	public void setMailVerify(boolean mailVerify) {
+		this.mailVerify = mailVerify;
+	}
+
+	public User(boolean mailVerify) {
+		super();
+		this.mailVerify = mailVerify;
 	}
 
 	public int getId() {

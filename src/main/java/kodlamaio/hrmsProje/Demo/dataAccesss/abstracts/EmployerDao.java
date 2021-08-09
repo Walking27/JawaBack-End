@@ -6,4 +6,5 @@ import kodlamaio.hrmsProje.Demo.entities.concretes.Employer;
 
 public interface EmployerDao extends JpaRepository<Employer, Integer>{
 
+	
 }
